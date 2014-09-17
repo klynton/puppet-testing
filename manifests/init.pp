@@ -1,35 +1,38 @@
 # == Class: testing
 #
-# Full description of class testing here.
+# Just a quick Puppet module to do some testing things.
 #
 # === Parameters
 #
 # Document parameters here.
 #
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
+# [*docroot*]
+#   The directory that the webserver should use as the directory containing files to serve..
+#
+# [*port_number*]
+#   The port number you want the virtual host to listen on.
+#
+# [*repo_url*]
+#   The Git repo URL that you want to be served from the docroot.
 #
 # === Variables
 #
 # Here you should define a list of variables that this module would require.
 #
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if
-#   it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should be avoided in favor of class parameters as
-#   of Puppet 2.6.)
+# [*docroot*]
+#   The directory that the webserver should use as the directory containing files to serve.
 #
 # === Examples
 #
-#  class { testing:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
+#  class { 'testing': 
+#    docroot     => '/var/www/html',
+#    port_number => '80',
+#    repo_url    => 'git://github.com/klynton/puppet-testing.git',
 #  }
 #
 # === Authors
 #
-# Author Name <author@domain.com>
+# Klynton Jessup <klynton@objectsyndicate.com>
 #
 # === Copyright
 #
