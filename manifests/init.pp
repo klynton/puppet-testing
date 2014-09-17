@@ -36,9 +36,27 @@
 #
 # === Copyright
 #
-# Copyright 2014 Your name here, unless otherwise noted.
+# Copyright 2014 Klynton Jessup
 #
-class testing {
-
-
+class testing (
+  $docroot     = '/srv/puppetlabs/klynton-jessup',
+  $port_number = '8000',
+  $repo_url    = 'git://github.com/puppetlabs/exercise-webpage.git',
+){
+  validate_string($repo_url)
+  validate_string($port_number)
+  validate_absolute_path($docroot)
+  include git
+  include nginx
+  git::repo { $repo_url:
+    path    => $docroot,
+    source  => $repo_url,
+    require => Nginx::Resource::Vhost[$docroot],
+  }
+  nginx::resource::vhost { $docroot:
+    ensure      => present,
+    www_root    => $docroot,
+    listen_port => $port_number,
+    notify      => Class['nginx::service'],
+  }
 }
