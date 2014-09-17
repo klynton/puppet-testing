@@ -11,6 +11,14 @@
     {
       "name": "puppetlabs-stdlib",
       "version_range": ">= 1.0.0"
+    },
+    {
+      "name": "jfryman-nginx",
+      "version_range": ">= 0.0.10"
+    },
+    {
+      "name": "jproyo-git",
+      "version_range": ">= 0.1.0"
     }
   ]
 }
