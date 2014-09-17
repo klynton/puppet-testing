@@ -7,8 +7,14 @@
   "source": "https://github.com/klynton/puppet-testing",
   "project_page": "https://github.com/klynton/puppet-testing",
   "issues_url": "https://github.com/klynton/puppet-testing/issues",
+  "operatingsystem_support": [
+   {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [ "5","6", "7" ]
+   }
+  ],
   "dependencies": [
-    {
+   {
       "name": "puppetlabs-stdlib",
       "version_range": ">= 1.0.0"
     },
@@ -22,4 +28,3 @@
     }
   ]
 }
-
