@@ -1,0 +1,17 @@
+{
+  "name": "klynton-testing",
+  "version": "0.0.1",
+  "author": "klynton",
+  "summary": "Just a test module.",
+  "license": "Apache 2.0",
+  "source": "https://github.com/klynton/puppet-testing",
+  "project_page": "https://github.com/klynton/puppet-testing",
+  "issues_url": "https://github.com/klynton/puppet-testing/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_range": ">= 1.0.0"
+    }
+  ]
+}
+
