@@ -6,8 +6,11 @@
 #
 # Document parameters here.
 #
+# [*vhost_name*]
+#   The name of the nginx virtual host to create.
+#
 # [*docroot*]
-#   The directory that the webserver should use as the directory containing files to serve..
+#   The directory that the webserver should use as the directory containing files to serve.
 #
 # [*port_number*]
 #   The port number you want the virtual host to listen on.
@@ -25,6 +28,7 @@
 # === Examples
 #
 #  class { 'testing': 
+#    vhost_name  => 'my-vhost',
 #    docroot     => '/var/www/html',
 #    port_number => '80',
 #    repo_url    => 'git://github.com/klynton/puppet-testing.git',
